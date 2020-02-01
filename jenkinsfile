@@ -9,6 +9,11 @@ pipeline {
         CI = 'true'
     }
     stages {
+        stage('gitcheckout'){
+            step {
+              git 'https://github.com/koprasad552/Kalyanam-UI.git'
+              }
+        }      
         stage('Build') {
             steps {
                 sh 'npm install'
