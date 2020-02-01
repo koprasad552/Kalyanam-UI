@@ -4,10 +4,6 @@ pipeline {
             image 'node:6-alpine'
             args '-p 3000:3000'
         }
-    }
-    environment {
-        CI = 'true'
-    }
     stages {
         stage('gitcheckout'){
             steps {
@@ -19,11 +15,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-         stage('code status'){
-             steps {
-                withSonarQubeEnv {
-               sh "./home clean sonarqube"
-            }
-        }
-    }
-}
+      }  
+   
+         
