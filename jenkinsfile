@@ -10,7 +10,7 @@ pipeline {
     }
     stages {
         stage('gitcheckout'){
-            step {
+            steps {
               git 'https://github.com/koprasad552/Kalyanam-UI.git'
               }
         }      
